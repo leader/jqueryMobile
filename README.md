@@ -7,9 +7,9 @@ The Sample Mockup page consists of
 -- Content with 3 equal sized columns
 -- A gallery feed fetching images with different heights from a JSONP URL and displaying them in tiles without any gaps/padding/margins. (Involves Javascript)
 
-The Mockup file is mockup.png
-The jQueryMobile with Responsive Design is in jquerymobile.html & jmobilecss3.css
-The WebApp Mobile Design is in mobiledesign.html & mobiledesign.css
+--The Mockup file is mockup.png
+-- The jQueryMobile with Responsive Design is in jquerymobile.html & jmobilecss3.css
+-- The WebApp Mobile Design is in mobiledesign.html & mobiledesign.css
 
 The jQueryMobile and Responsive design has been implemented using the existing HTML5 & CSS3 code @ https://github.com/leader/html5css3 as the base code.
 
