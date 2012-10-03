@@ -1,0 +1,88 @@
+!!!
+%html
+  %head
+    %meta{:charset => "utf-8"}
+      %meta{:content => "width=device-width", :name => "viewport"}/
+      %meta{:content => "yes", :name => "apple-mobile-web-app-capable"}/
+      %title jQuery Mobile with Responsive Design
+      %link{:href => "http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css", :rel => "stylesheet"}/
+      %link{:href => "css/mobiledesign.css", :rel => "stylesheet"}/
+      %script{:src => "http://code.jquery.com/jquery-1.8.2.min.js"}
+      %script{:src => "http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"}
+      /
+        <link rel="apple-touch-icon" href="idg.png" />
+        <link rel="apple-touch-startup-image" href="mockup.png" />
+  %body
+    .type-home{"data-role" => "page", "data-theme" => "a"}
+      %div{"data-role" => "content"}
+        .content-secondary
+          %div{"data-position" => "fixed", "data-role" => "header"}
+            %h1 Jquery Mobile Site
+          #header
+            #logo 300*140
+            .ads{"data-content-theme" => "e", "data-theme" => "d"}
+              .ui-block-a.ad 140*140
+              .ui-block-b.ad 140*140
+          #nav
+            %ul{"data-dividertheme" => "b", "data-inset" => "true", "data-role" => "listview", "data-theme" => "c"}
+              %li
+                %a{:href => ""} Button1(120*40)
+              %li
+                %a{:href => ""} Button1(120*40)
+              %li
+                %a{:href => ""} Button1(120*40)
+              %li
+                %a{:href => ""} Button1(120*40)
+              %li
+                %a{:href => ""} Button1(120*40)
+        / /content-primary
+        .content-primary
+          .ui-grid-b{"data-theme" => "c"}
+            .ui-block-a.box_300 Block A
+            .ui-block-b.box_300.middle Block B
+            .ui-block-c.box_300 Block C
+          %table
+            %tr
+              %th My Table
+              %th Column 1
+              %th Column 2
+            %tr
+              %td Row 1
+              %td Row 1 Column 1
+              %td Row 1 Column 2
+            %tr.alt
+              %td Row 2
+              %td Row 2 Column 1
+              %td Row 2 Column 2
+            %tr
+              %td Row 3
+              %td Row 3 Column 1
+              %td Row 3 Column 2
+          #gallery
+      %div{"data-role" => "footer", "data-theme" => "c"}
+        %h6
+          %a{:href => "http://validator.w3.org/check?uri=referer"} Valid HTML5
+        %div{"data-position" => "fixed", "data-role" => "navbar"}
+          %ul
+            %li
+              %a{:href => "#"} Nav1
+            %li
+              %a{:href => "#"} Nav2
+            %li
+              %a{:href => "#"} Nav3
+            %li
+              %a{:href => "#"} Nav4
+            %li
+              %a{:href => "#"} Nav5
+      :javascript
+			function yourcallbackfunction(data){
+				ul = document.getElementById('gallery');
+				data.map(function(imageUrl){
+						console.log(imageUrl);
+						var imageNode=document.createElement("img");
+						imageNode.src = imageUrl;
+						document.getElementById("gallery").appendChild(imageNode);
+                     });
+        }
+        
+		      %script{:src => "http://numberonelarge.com/tapjoy/jsonp.php?callback=yourcallbackfunction", :type => "text/javascript"}
